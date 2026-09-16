@@ -1,0 +1,46 @@
+# ==========================================================
+# .gitignore — a list of files/folders Git should NOT track.
+# Anything matching a line here is skipped by 'git add' and
+# never pushed to GitHub. Lines starting with '#' are comments.
+# ==========================================================
+
+# --- Python ---
+
+# 'venv/' is your virtual environment folder — a private, local
+# copy of Python + installed packages. It's big, machine-specific,
+# and can be recreated anytime with 'python -m venv venv'.
+# Never commit it — it would just bloat the repo.
+venv/
+
+# '__pycache__/' holds compiled bytecode (.pyc) that Python
+# auto-generates to run faster. It's disposable and regenerated
+# automatically — no reason to track it.
+__pycache__/
+
+# '*.pyc' and '*.pyo' are individual compiled Python files.
+# The '*' is a wildcard meaning "any file ending in .pyc/.pyo".
+# Same reason: auto-generated, disposable.
+*.pyc
+*.pyo
+
+# --- Environment / secrets ---
+
+# '.env' files hold SECRETS — API keys, passwords, AWS credentials.
+# This is the MOST IMPORTANT line: committing secrets to a public
+# repo can get your AWS account hacked or drained. Always ignore it.
+.env
+
+# --- VS Code ---
+
+# '.vscode/' stores YOUR personal editor settings (themes, layout).
+# They're specific to your machine and irrelevant to the project,
+# so we keep them out of everyone else's clone.
+.vscode/
+
+# --- OS files ---
+
+# '.DS_Store' (Mac) and 'Thumbs.db' (Windows) are junk files the
+# operating system creates automatically in folders. They have
+# nothing to do with your code — ignore them so they don't sneak in.
+.DS_Store
+Thumbs.db
